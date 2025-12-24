@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection System | Complex Environments</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="system-header">
+            <div class="system-id">CORE_v3.0 // ANALYZER</div>
+            <div class="system-status"><span class="blink">●</span> SYSTEM_ACTIVE</div>
+        </header>
+
+        <main class="workspace">
+            <section class="viewer-section">
+                <div class="toolbar">
+                    <input type="file" id="file" accept="image/*" hidden>
+                    <label for="file" class="hud-btn">ВЫБРАТЬ ОБЪЕКТ</label>
+                    <button onclick="scan()" class="hud-btn primary">СКАНИРОВАТЬ</button>
+                </div>
+
+                <div id="display" class="image-viewport">
+                    <div class="vignette"></div>
+                    <div id="placeholder">ОЖИДАНИЕ ЗАГРУЗКИ ДАННЫХ...</div>
+                </div>
+            </section>
+
+            <aside class="analysis-section">
+                <div class="panel-header">LIVE_ANALYTICS</div>
+                <div class="stats-bar">
+                    ОБЪЕКТОВ: <span id="count">0</span>
+                </div>
+                <div id="faces-list" class="faces-scroll-area">
+                    </div>
+            </aside>
+        </main>
+    </div>
+    <script src="/static/script.js" defer></script>
+</body>
+</html>
